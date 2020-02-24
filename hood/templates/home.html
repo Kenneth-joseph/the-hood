@@ -1,41 +1,93 @@
 {% extends 'base.html'%}
 {%block content%}
-<div class="container">
+<div class="container mt-5">
     {% for post in object_list %}
     <div class="row">
         <div class="col-md-12 col-sm-12 col-lg-12 ">
-            
 
-            <!-- Card Dark -->
-<div class="card mt-5 post">
 
-  <!-- Card image -->
-  <div class="view overlay">
-    <img class="card-img-top" src="{{post.picture.url}}"
-      alt="Card image cap">
-    <a>
-      <div class="mask rgba-white-slight"></div>
-    </a>
-  </div>
+  <!--Section: Content-->
+  <section class="dark-grey-text">
 
-  <!-- Card content -->
-  <div class="card-body elegant-color white-text rounded-bottom">
+    <!-- Section heading -->
+    <h2 class="text-center font-weight-bold mb-4 pb-2">Recent posts</h2>
+<!--    &lt;!&ndash; Section description &ndash;&gt;-->
+<!--    <p class="text-center mx-auto w-responsive mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error amet numquam iure provident voluptate esse quasi, veritatis totam voluptas nostrum quisquam eum porro a pariatur veniam.</p>-->
 
-    <!-- Social shares button -->
-    <a class="activator waves-effect mr-4"><i class="fas fa-share-alt white-text"></i></a>
-    <!-- Title -->
-    <h4><a class="card-title" href="{% url 'post-detail' post.id %}" style="decoration:none;">{{post.title}}</a></h4>
-    <hr class="hr-light">
-    <!-- Text -->
-    <p class="card-text white-text mb-4">{{post.content}}</p>
-    <!-- Link -->
-    <a href="#!" class="white-text d-flex justify-content-end">
-      <h5>Read more <i class="fas fa-angle-double-right"></i></h5>
-    </a>
+  	<!-- Grid row -->
+    <div class="row align-items-center">
 
-  </div>
+      <!-- Grid column -->
+      <div class="col-lg-5 col-xl-4">
 
-</div>
+        <!-- Featured image -->
+
+        <div class="view overlay rounded z-depth-half ">
+          <img class="img-fluid  picp " src="{{post.picture.url}}" alt="Sample image">
+          <a>
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-lg-7 col-xl-8">
+
+        <!-- Post title -->
+        <h4 class="font-weight-bold mb-3"><a href="{% url 'post-detail' post.id %}" style="color:black"><strong>{{post.title}}</strong></a></h4>
+        <!-- Excerpt -->
+        <p class="dark-grey-text">{{post.content}}.</p>
+        <!-- Post data -->
+        <p>by <a class="font-weight-bold">Jessica Clark</a>&nbsp;&nbsp;{{post.pub_date|timesince}} AGO</p>
+        <!-- Read more button -->
+        <a class="btn btn-primary btn-md mx-0 btn-rounded">Read more</a>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+    <hr class="my-5">
+
+  </section>
+  <!--Section: Content-->
+
+
+
+
+<!--            &lt;!&ndash; Card Dark &ndash;&gt;-->
+<!--<div class="card mt-5 post">-->
+
+<!--  &lt;!&ndash; Card image &ndash;&gt;-->
+<!--  <div class="view overlay">-->
+<!--    <img class="card-img-top" src=""-->
+<!--      alt="Card image cap">-->
+<!--    <a>-->
+<!--      <div class="mask rgba-white-slight"></div>-->
+<!--    </a>-->
+<!--  </div>-->
+
+<!--  &lt;!&ndash; Card content &ndash;&gt;-->
+<!--  <div class="card-body elegant-color white-text rounded-bottom">-->
+
+<!--    &lt;!&ndash; Social shares button &ndash;&gt;-->
+<!--    <a class="activator waves-effect mr-4"><i class="fas fa-share-alt white-text"></i></a>-->
+<!--    &lt;!&ndash; Title &ndash;&gt;-->
+<!--    <h4><a class="card-title" href="" style="decoration:none;"></a></h4>-->
+<!--    <hr class="hr-light">-->
+<!--    &lt;!&ndash; Text &ndash;&gt;-->
+<!--    <p class="card-text white-text mb-4"></p>-->
+<!--    &lt;!&ndash; Link &ndash;&gt;-->
+<!--    <a href="#!" class="white-text d-flex justify-content-end">-->
+<!--      <h5>Read more <i class="fas fa-angle-double-right"></i></h5>-->
+<!--    </a>-->
+
+<!--  </div>-->
+
+<!--</div>-->
 <!-- Card Dark -->
         </div>
 

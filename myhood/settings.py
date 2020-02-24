@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'bootstrap4',
     'hood.apps.HoodConfig',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -122,3 +123,5 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 # defining the image root
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
