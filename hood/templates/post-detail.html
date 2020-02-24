@@ -1,0 +1,13 @@
+{%extends 'base.html'%}
+{%block content%}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            <h3>{{post.title}}</h3>
+            <p>{{post.content}}</p>
+            <p>{{post.neighborhood.name}}</p>
+        </div>
+    </div>
+</div>
+{%endblock%}

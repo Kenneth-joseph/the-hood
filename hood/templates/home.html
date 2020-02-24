@@ -1,17 +1,17 @@
 {% extends 'base.html'%}
 {%block content%}
 <div class="container">
+    {% for post in object_list %}
     <div class="row">
-        {% for post in object_list %}
         <div class="col-md-12 col-sm-12 col-lg-12 ">
             
 
             <!-- Card Dark -->
-<div class="card">
+<div class="card mt-5 post">
 
   <!-- Card image -->
   <div class="view overlay">
-    <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2821%29.jpg"
+    <img class="card-img-top" src="{{post.picture.url}}"
       alt="Card image cap">
     <a>
       <div class="mask rgba-white-slight"></div>
@@ -24,7 +24,7 @@
     <!-- Social shares button -->
     <a class="activator waves-effect mr-4"><i class="fas fa-share-alt white-text"></i></a>
     <!-- Title -->
-    <h4 class="card-title">{{post.title}}</h4>
+    <h4><a class="card-title" href="{% url 'post-detail' post.id %}" style="decoration:none;">{{post.title}}</a></h4>
     <hr class="hr-light">
     <!-- Text -->
     <p class="card-text white-text mb-4">{{post.content}}</p>
@@ -38,6 +38,7 @@
 </div>
 <!-- Card Dark -->
         </div>
+
     </div>
     {%endfor%}
 </div>

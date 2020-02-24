@@ -5,6 +5,7 @@ from django.db import models
 from django.db import models
 import datetime as dt
 from django.contrib.auth.models import User
+from django.urls import reverse
 
 
 # Create your models here.
@@ -30,6 +31,9 @@ class Post(models.Model):
 
     def __str__(self):
         return self.content
+
+    def get_absolute_url(self):
+        return reverse('home')
 
 
 class Neighborhood(models.Model):
