@@ -28,9 +28,15 @@ class CreateNewPost(CreateView):
     template_name = 'new_post.html'
     fields = ['title', 'content', 'picture']
 
-    def form_invalid(self, form):
+    def form_valid(self, form):
         form.instance.profile = self.request.user
         return super().form_valid(form)
+
+
+class CreateBusiness(CreateView):
+    model = Business
+    template_name = 'new_business.html'
+    fields = ['name', 'description']
 
 
 class SinglePost(DetailView):

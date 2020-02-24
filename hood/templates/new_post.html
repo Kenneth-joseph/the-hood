@@ -13,7 +13,7 @@
     <div class="card-body ">
                  <p class="h4 text-center py-4">Create Post</p>
 
-       <form action="" method="post" class="grey-text font-weight-light">
+       <form action="" method="post" enctype="multipart/form-data" class="grey-text font-weight-light">
                 {% csrf_token %}
                 {{ form|crispy }}
          <div class="form-group text-center py-4 mt-3">

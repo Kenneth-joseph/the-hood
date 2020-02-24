@@ -1,16 +1,23 @@
 {% extends 'base.html'%}
 {%block content%}
-<div class="container mt-5">
+<div class="container-fluid">
+   <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 text-center">
+      <h3>Recent Post</h3>
+    </div>
+  </div>
+</div>
+<div class="container-fluid mt-5">
     {% for post in object_list %}
     <div class="row">
-        <div class="col-md-12 col-sm-12 col-lg-12 ">
-
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
 
   <!--Section: Content-->
-  <section class="dark-grey-text">
+  <section class="dark-grey-text" style="color:white;">
 
     <!-- Section heading -->
-    <h2 class="text-center font-weight-bold mb-4 pb-2">Recent posts</h2>
+
 <!--    &lt;!&ndash; Section description &ndash;&gt;-->
 <!--    <p class="text-center mx-auto w-responsive mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error amet numquam iure provident voluptate esse quasi, veritatis totam voluptas nostrum quisquam eum porro a pariatur veniam.</p>-->
 
@@ -38,7 +45,7 @@
         <!-- Post title -->
         <h4 class="font-weight-bold mb-3"><a href="{% url 'post-detail' post.id %}" style="color:black"><strong>{{post.title}}</strong></a></h4>
         <!-- Excerpt -->
-        <p class="dark-grey-text">{{post.content}}.</p>
+        <p class="dark-grey-text"style="color:white;">{{post.content}}.</p>
         <!-- Post data -->
         <p>by <a class="font-weight-bold">Jessica Clark</a>&nbsp;&nbsp;{{post.pub_date|timesince}} AGO</p>
         <!-- Read more button -->
@@ -50,48 +57,51 @@
     </div>
     <!-- Grid row -->
 
-    <hr class="my-5">
+    <hr class="my-1">
 
   </section>
   <!--Section: Content-->
 
+        </div>
+<div class="col-md-1"></div>
+    </div>
+    {% empty %}
+    <!--empty section visible while there are no posts-->
+    <div class="row">
+            <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <!-- Jumbotron -->
+        <div class="jumbotron text-center">
 
+  <!-- Title -->
+        <h4 class="card-title h4 pb-2"><strong>No posts yet Sing Up and Share</strong></h4>
 
-
-<!--            &lt;!&ndash; Card Dark &ndash;&gt;-->
-<!--<div class="card mt-5 post">-->
-
-<!--  &lt;!&ndash; Card image &ndash;&gt;-->
-<!--  <div class="view overlay">-->
-<!--    <img class="card-img-top" src=""-->
-<!--      alt="Card image cap">-->
-<!--    <a>-->
-<!--      <div class="mask rgba-white-slight"></div>-->
-<!--    </a>-->
-<!--  </div>-->
-
-<!--  &lt;!&ndash; Card content &ndash;&gt;-->
-<!--  <div class="card-body elegant-color white-text rounded-bottom">-->
-
-<!--    &lt;!&ndash; Social shares button &ndash;&gt;-->
-<!--    <a class="activator waves-effect mr-4"><i class="fas fa-share-alt white-text"></i></a>-->
-<!--    &lt;!&ndash; Title &ndash;&gt;-->
-<!--    <h4><a class="card-title" href="" style="decoration:none;"></a></h4>-->
-<!--    <hr class="hr-light">-->
-<!--    &lt;!&ndash; Text &ndash;&gt;-->
-<!--    <p class="card-text white-text mb-4"></p>-->
-<!--    &lt;!&ndash; Link &ndash;&gt;-->
-<!--    <a href="#!" class="white-text d-flex justify-content-end">-->
-<!--      <h5>Read more <i class="fas fa-angle-double-right"></i></h5>-->
-<!--    </a>-->
-
-<!--  </div>-->
-
-<!--</div>-->
-<!-- Card Dark -->
+  <!-- Card image -->
+        <div class="view overlay my-4">
+             <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(70).jpg" class="img-fluid" alt="">
+            <a href="#">
+                <div class="mask rgba-white-slight"></div>
+            </a>
         </div>
 
-    </div>
+        <h5 class="indigo-text h5 mb-4">Photography</h5>
+
+        <p class="card-text">keep informed the people of your hood.</p>
+
+  <!-- Linkedin -->
+        <a class="fa-lg p-2 m-2 li-ic"><i class="fab fa-linkedin-in grey-text"></i></a>
+  <!-- Twitter -->
+        <a class="fa-lg p-2 m-2 tw-ic"><i class="fab fa-twitter grey-text"></i></a>
+  <!-- Dribbble -->
+        <a class="fa-lg p-2 m-2 fb-ic"><i class="fab fa-facebook-f grey-text"></i></a>
+
+        </div>
+<!-- Jumbotron -->
+            </div>
+            <div class="col-md-2"></div>
+            </div>
+            </div>
     {%endfor%}
 </div>
 {%endblock%}
