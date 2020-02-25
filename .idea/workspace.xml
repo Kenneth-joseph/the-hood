@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="caa5e9d5-00a1-4a0d-affb-ac57722c42b2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/media/photos/desk38.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/photos/dsk102.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hood/templates/new_business.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/Screenshot_from_2020-02-25_19-17-56.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hood/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/hood/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hood/templates/new_post.html" beforeDir="false" afterPath="$PROJECT_DIR$/hood/templates/new_post.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hood/templates/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/hood/templates/navbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hood/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/hood/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hood/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/hood/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/index.css" afterDir="false" />
     </list>
@@ -39,6 +40,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="ToolWindowFavorites.ShowToolbar" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="SvnConfiguration">
@@ -62,10 +64,10 @@
       <screen x="0" y="27" width="1920" height="1010" />
     </state>
     <state x="0" y="167" width="1022" height="737" key="SettingsEditor/0.27.1920.1010@0.27.1920.1010" timestamp="1582379679536" />
-    <state x="131" y="359" key="com.intellij.ide.util.TipDialog" timestamp="1582567391267">
+    <state x="131" y="359" key="com.intellij.ide.util.TipDialog" timestamp="1582651563920">
       <screen x="0" y="27" width="1920" height="1010" />
     </state>
-    <state x="131" y="359" key="com.intellij.ide.util.TipDialog/0.27.1920.1010@0.27.1920.1010" timestamp="1582567391267" />
+    <state x="131" y="359" key="com.intellij.ide.util.TipDialog/0.27.1920.1010@0.27.1920.1010" timestamp="1582651563920" />
     <state x="200" y="351" width="540" height="368" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1582380832309">
       <screen x="0" y="27" width="1920" height="1010" />
     </state>

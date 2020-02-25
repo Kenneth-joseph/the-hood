@@ -9,5 +9,5 @@ urlpatterns = [
     path('profile/', ProfilePage.as_view(), name='profile'),
     path('post/new', CreateNewPost.as_view(), name='new_post'),
     path('post/<int:pk>/', SinglePost.as_view(), name='post-detail'),
-    path('business/new', CreateBusiness.as_view(), name='new_business')
+    path('business/new', CreateBusiness.as_view(), name='new_business'),
 ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

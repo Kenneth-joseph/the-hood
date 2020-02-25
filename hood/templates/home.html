@@ -7,14 +7,14 @@
     </div>
   </div>
 </div>
-<div class="container-fluid mt-5">
+<div class="container-fluid mt-5 two">
     {% for post in object_list %}
     <div class="row">
         <div class="col-md-1"></div>
         <div class="col-md-10">
 
   <!--Section: Content-->
-  <section class="dark-grey-text" style="color:white;">
+  <section class="dark-grey-text">
 
     <!-- Section heading -->
 
@@ -47,7 +47,7 @@
         <!-- Excerpt -->
         <p class="dark-grey-text"style="color:white;">{{post.content}}.</p>
         <!-- Post data -->
-        <p>by <a class="font-weight-bold">Jessica Clark</a>&nbsp;&nbsp;{{post.pub_date|timesince}} AGO</p>
+        <p>by <a class="font-weight-bold">{{post.profile}}</a>&nbsp;&nbsp;{{post.pub_date|timesince}} AGO</p>
         <!-- Read more button -->
         <a class="btn btn-primary btn-md mx-0 btn-rounded">Read more</a>
 

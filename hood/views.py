@@ -38,6 +38,10 @@ class CreateBusiness(CreateView):
     template_name = 'new_business.html'
     fields = ['name', 'description']
 
+    def form_valid(self, form):
+        form.instance.profile = self.request.user
+        return super().form_valid(form)
+    
 
 class SinglePost(DetailView):
     model = Post
