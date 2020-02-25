@@ -31,11 +31,11 @@
 
 
 {% include 'navbar.html' %}
-{% if user.is_authenticated%}
-<p class="ml-3"> Hi {{ user.username }}</p>
-{% else %}
-<p class="ml-3"> You are not logged in <a href="{% url 'login'%}">Log in</a></p>
-{%endif%}
+<!--{% if user.is_authenticated%}-->
+<!--<p class="ml-3"> Hi {{ user.username }}</p>-->
+<!--{% else %}-->
+<!--<p class="ml-3"> You are not logged in <a href="{% url 'login'%}">Log in</a></p>-->
+<!--{%endif%}-->
 {% block content %}
 
 {%endblock%}

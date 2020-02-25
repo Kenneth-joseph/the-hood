@@ -16,12 +16,12 @@ Including another URLconf
 # from django.conf.urls import url,include
 from django.urls import path, include
 from django.contrib import admin
-from users.views import SignUpView
-from users import views as user_views
+# from users.views import SignUpView
+from users import views as user_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('django.contrib.auth.urls')),
-    path('register/', SignUpView.as_view(), name='registration'),
+    path('register/', user_view.register, name='registration'),
     path('', include('hood.urls')),
 ]
