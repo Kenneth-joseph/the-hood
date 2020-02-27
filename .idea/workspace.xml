@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="caa5e9d5-00a1-4a0d-affb-ac57722c42b2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/hood/templates/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/hood/templates/footer.html" afterDir="false" />
-    </list>
+    <list default="true" id="caa5e9d5-00a1-4a0d-affb-ac57722c42b2" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
