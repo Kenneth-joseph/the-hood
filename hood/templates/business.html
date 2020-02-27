@@ -1,15 +1,22 @@
 {%extends 'base.html'%}
 {%block content%}
 <div class="container-fluid">
+    
     <div class="row">
-        <div class="col-md-10"></div>
-        <div class="col-md-2"> <a class="btn btn-info" href="{%url 'hood:new_business'%}">Create Business</a></div>
+        <div class="col-md-2"></div>
+        <div class="col-md-8 mt-3">
+            <div class="jumbotron">
+        
+                <h2 class="display-4 text-center">Businesses</h2>
+            </div>
+        </div>
+        <div class="col-md-2 mt-3"> <a class="btn btn-info" href="{%url 'hood:new_business'%}">Create Business</a></div>
     </div>
       {% for business in object_list%}
     <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-8">
-
+            
             <!-- News jumbotron -->
 <div class="jumbotron text-center hoverable p-4 mt-5">
 

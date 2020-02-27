@@ -55,10 +55,9 @@ class SinglePost(LoginRequiredMixin, DetailView):
     login_url = 'login'
 
 
-class UpdateProfile(LoginRequiredMixin, UpdateView):
+class UpdateProfile(UpdateView):
     model = Profile
     template_name = 'update_profile.html'
-    login_url = 'login'
 
 
 class BusinessPage(LoginRequiredMixin, ListView):
