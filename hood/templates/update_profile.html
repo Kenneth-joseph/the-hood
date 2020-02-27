@@ -1,0 +1,31 @@
+{%extends 'base.html'%}
+{%load crispy_forms_tags %}
+{%block content%}
+<div class="container">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <!-- Card -->
+    <div class="card mx-xl-5 post">
+
+  <!-- Card body -->
+    <div class="card-body ">
+                 <p class="h4 text-center py-4">Update Profile</p>
+
+       <form action="" method="post" enctype="multipart/form-data" class="grey-text font-weight-light">
+                {% csrf_token %}
+                {{ form|crispy }}
+         <div class="form-group text-center py-4 mt-3">
+        <button class="btn btn-cyan" type="submit">Update
+        </button>
+      </div>
+         </form>
+     </div>
+  <!-- Card body -->
+</div>
+<!-- Card -->
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</div>
+{%endblock%}

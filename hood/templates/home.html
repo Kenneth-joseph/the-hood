@@ -43,7 +43,7 @@
       <div class="col-lg-7 col-xl-8">
 
         <!-- Post title -->
-        <h4 class="font-weight-bold mb-3"><a href="{% url 'post-detail' post.id %}" style="color:black"><strong>{{post.title}}</strong></a></h4>
+        <h4 class="font-weight-bold mb-3"><a href="{% url 'hood:post-detail' post.id %}" style="color:black"><strong>{{post.title}}</strong></a></h4>
         <!-- Excerpt -->
         <p class="dark-grey-text"style="color:white;">{{post.content}}.</p>
         <!-- Post data -->

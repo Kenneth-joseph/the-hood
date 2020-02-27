@@ -6,6 +6,8 @@ from django.db import models
 import datetime as dt
 from django.contrib.auth.models import User
 from django.urls import reverse
+from django.db.models.signals import post_save
+from PIL import Image
 
 
 # Create your models here.
@@ -17,6 +19,23 @@ class Profile(models.Model):
     hood_name = models.CharField(max_length=30)
     profile_pic = models.ImageField(upload_to='photos/', default='kent.jpg')
     phone_number = models.IntegerField(default=0)
+
+    def save(self, *args, **kwargs):
+        super().save(*args, **kwargs)
+        img = Image.open(self.profile_pic.path)
+        if img.height > 250 or img.width > 180:
+            output_size = (220, 150)
+            img.thumbnail(output_size)
+            img.save(self.profile_pic.path)
+
+    def get_absolute_url(self):
+        return reverse('hood:update_profile', kwargs={'pk': self.pk})
+
+    def create_profile(sender, **kwargs):
+        if kwargs['created']:
+            profile = Profile.objects.create(user=kwargs['instance'])
+
+    post_save.connect(create_profile, sender=User)
 
     def __str__(self):
         return f'{self.user.username} Profile'
@@ -53,7 +72,10 @@ class Business(models.Model):
     name = models.CharField(max_length=30)
     description = models.TextField()
     profile = models.ForeignKey(User, on_delete=models.CASCADE)
-    neighborhood = models.ForeignKey(Neighborhood, on_delete=models.CASCADE)
+    neighborhood = models.ForeignKey(Neighborhood, on_delete=models.CASCADE, null=True)
 
     def __str__(self):
         return self.description
+
+    def get_absolute_url(self):
+        return reverse('home')
