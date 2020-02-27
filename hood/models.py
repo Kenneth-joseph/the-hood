@@ -70,6 +70,7 @@ class Neighborhood(models.Model):
 
 class Business(models.Model):
     name = models.CharField(max_length=30)
+    business_pic = models.ImageField(upload_to='photos/', default='biz.jpg')
     description = models.TextField()
     profile = models.ForeignKey(User, on_delete=models.CASCADE)
     neighborhood = models.ForeignKey(Neighborhood, on_delete=models.CASCADE, null=True)
@@ -78,4 +79,4 @@ class Business(models.Model):
         return self.description
 
     def get_absolute_url(self):
-        return reverse('home')
+        return reverse('hood:business')

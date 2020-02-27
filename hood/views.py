@@ -41,7 +41,7 @@ class CreateNewPost(LoginRequiredMixin, CreateView):
 class CreateBusiness(LoginRequiredMixin, CreateView):
     model = Business
     template_name = 'new_business.html'
-    fields = ['name', 'description']
+    fields = ['name', 'description','business_pic']
     login_url = 'login'
 
     def form_valid(self, form):
@@ -62,5 +62,6 @@ class UpdateProfile(LoginRequiredMixin, UpdateView):
 
 
 class BusinessPage(LoginRequiredMixin, ListView):
-    model= Business
-    template_name =
+    model = Business
+    template_name = 'business.html'
+    login_url = 'login'
