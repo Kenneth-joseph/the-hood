@@ -8,8 +8,10 @@
 > **Visual presentation of my work**
  >>##### Landing page
 ![this shows the top page](static/images/landing.png)
- >>##### business
-![this shows the top page](static/images/home.png)
+ >>##### Register
+![this shows the top page](static/images/reg.png)
+>>##### Log in
+![this shows the top page](static/images/login.png)
  >>##### search
 ![this shows the top page](static/images/food.png)
 >>##### profile
@@ -18,6 +20,9 @@
 ![this shows the top page](static/images/post.png)
 >>##### create businness 
 ![this shows the top page](static/images/createb.png)
+>>##### business
+![this shows the top page](static/images/food.png)
+
 
  ## Description
 >
