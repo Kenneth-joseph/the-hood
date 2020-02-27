@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="caa5e9d5-00a1-4a0d-affb-ac57722c42b2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/createb.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/food.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/landing.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/post.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/profile.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/login.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/reg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/templates/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/registration.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
