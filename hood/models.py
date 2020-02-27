@@ -52,7 +52,7 @@ class Post(models.Model):
         return self.content
 
     def get_absolute_url(self):
-        return reverse('home')
+        return reverse('hood:home')
 
 
 class Neighborhood(models.Model):
